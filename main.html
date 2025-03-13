@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포트폴리오</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jua&display=swap">
+    <link rel="stylesheet" href="css/mainDesign.css">
+</head>
+<body>
+    <div class="sidebar">
+        <ul>
+            <li><a href="#home" onclick="showSection('home')">홈</a></li>
+            <li><a href="#profile" onclick="showSection('profile')">프로필</a></li>
+            <li><a href="#career" onclick="showSection('career')">경력사항</a></li>
+            <li><a href="#projects" onclick="showSection('projects')">프로젝트</a></li>
+            <li><a href="#contact" onclick="showSection('contact')">연락처</a></li>
+        </ul>
+    </div>
+    <div class="main-content" id="main-content">
+        <div id="home" class="section active">
+            <h1>Hi, Welcome to my portfolio.</h1>
+            <h2>Developer</h2>
+            <p>There is an end to everything.</p>
+        </div>
+        <div id="profile" class="section inactive">
+            <h1>Profile</h1>
+            <p>Name: 이성주</p>
+            <p>Birthday: 2001.09.24</p>
+            <p></p>
+        </div>
+        <div id="career" class="section inactive">
+            <h1>Career</h1>
+            <h2>Education</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Name</th>
+                        <th>Content</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2008.03 ~ 2014.02</td>
+                        <td>호암초등학교</td>
+                        <td>졸업</td>
+                    </tr>
+                    <tr>
+                        <td>2014.03 ~ 2015.02</td>
+                        <td>동아중학교</td>
+                        <td>전학</td>
+                    </tr>
+                    <tr>
+                        <td>2015.03 ~ 2020.02</td>
+                        <td>나드림학교</td>
+                        <td>졸업</td>
+                    </tr>
+                    <tr>
+                        <td>2022.10 ~ 2024.04</td>
+                        <td>군대</td>
+                        <td>병장 만기전역</td>
+                    </tr>
+                    <tr>
+                        <td>2020.03 ~</td>
+                        <td>신라대학교</td>
+                        <td>재학</td>
+                    </tr>                    
+                </tbody>
+            </table>
+            <h2>Certificate</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Name</th>
+                        <th>Content</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2020.01</td>
+                        <td>ITQ 한글파워포인트 A등급</td>
+                        <td>취득</td>
+                    </tr>
+                    <tr>
+                        <td>2020.01</td>
+                        <td>ITQ 인터넷 A등급</td>
+                        <td>취득</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="projects" class="section inactive">
+            <h1>Projects</h1>
+            <p>Here is my project information.</p>
+        </div>
+        <div id="contact" class="section inactive">
+            <h1>Contact</h1>
+            <p>Here is my contact information.</p>
+            <p>Email: seongju0924@gmail.com</p>
+            <p>Phone: 010-8436-7724</p>
+            <p>Address: Republic of Korea, Busan</p>
+        </div>
+    </div>
+
+    <script src="script/turnSite.js"></script>
+</body>
+</html>
