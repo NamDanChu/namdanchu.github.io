@@ -37,3 +37,19 @@ function showSection(sectionId) {
     activeSection.classList.remove('inactive');
     activeSection.classList.add('active');
 }
+
+function goToProjectSite() {
+    const urlInput = document.getElementById('project-url');
+    const url = urlInput.value.trim();
+    
+    if (url) {
+        // URL이 http:// 또는 https://로 시작하는지 확인
+        if (!/^https?:\/\//i.test(url)) {
+            window.open('https://' + url, '_blank');
+        } else {
+            window.open(url, '_blank');
+        }
+    } else {
+        alert('프로젝트 사이트 주소를 입력해주세요.');
+    }
+}
