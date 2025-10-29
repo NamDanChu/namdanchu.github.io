@@ -1,0 +1,5 @@
+{
+  "name": "Game Design Document: Auto Survivors",
+  "description": "A web-based game design document for a vehicular roguelike action game, outlining core mechanics, controls, progression systems, and technical specifications.",
+  "requestFramePermissions": []
+}
