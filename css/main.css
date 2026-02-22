@@ -1,0 +1,97 @@
+/**
+ * 파일명: main.css
+ * 수정일자: 2026-02-22
+ * 용도: NamDev 메인 페이지(main.html) 전용 스타일
+ * 구동 방법: main.html에서 <link href="css/main.css" rel="stylesheet"> 로 로드.
+ *          이 파일이 variables, reset, layout, components를 순차 import.
+ * 의존성: variables.css, reset.css, layout.css, components.css
+ */
+
+@import url('variables.css');
+@import url('reset.css');
+@import url('layout.css');
+@import url('components.css');
+
+/* ========== 메인 페이지 전용: 히어로 섹션 ========== */
+#home {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 60px;
+    background: radial-gradient(circle at 50% 50%, rgba(56, 189, 248, 0.1) 0%, transparent 50%);
+}
+
+#home h1 {
+    font-size: 4.5rem;
+    margin: 0;
+    line-height: 1.2;
+    letter-spacing: -1.5px;
+    font-weight: 800;
+}
+
+#home h1 span {
+    background: linear-gradient(135deg, #38bdf8, #818cf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#home > p {
+    font-size: 1.25rem;
+    color: var(--muted-color);
+    margin-top: 25px;
+    max-width: 700px;
+    line-height: 1.8;
+}
+
+/* ========== 메인 페이지 전용: 연락처 섹션 ========== */
+.contact-simple {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.contact-simple .email-link {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    text-decoration: none;
+    padding: 15px 30px;
+    background: var(--card-bg);
+    border-radius: 8px;
+    border: 1px dashed rgba(56, 189, 248, 0.3);
+    display: inline-block;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+.contact-simple .email-link:hover {
+    background: rgba(56, 189, 248, 0.1);
+    border-color: var(--accent-color);
+}
+
+/* 프로젝트 카드 (main.html) */
+.project-card {
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-card:hover {
+    color: inherit;
+}
+
+.project-category-tag {
+    display: inline-block;
+    font-size: 0.8rem;
+    color: var(--accent-color);
+    background: rgba(56, 189, 248, 0.1);
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-top: 12px;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    #home h1 { font-size: 2.8rem; }
+}

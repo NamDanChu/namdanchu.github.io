@@ -1,0 +1,82 @@
+/**
+ * 파일명: developer.css
+ * 수정일자: 2026-02-22
+ * 용도: developer 폴더 내 개발자 개인정보 페이지 전용 스타일
+ * 구동 방법: developer/*.html에서 <link href="../css/developer.css" rel="stylesheet"> 로 로드.
+ * 의존성: variables.css, reset.css, layout.css, components.css
+ */
+
+@import url('variables.css');
+@import url('reset.css');
+@import url('layout.css');
+@import url('components.css');
+
+/* ========== 개발자 페이지 전용: 프로필 레이아웃 ========== */
+.developer-page {
+    min-height: 100vh;
+    padding-top: 100px;
+}
+
+.developer-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.developer-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.developer-header .back-link {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-size: 0.95rem;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+.developer-header .back-link:hover {
+    text-decoration: underline;
+}
+
+/* 개발자 정보 테이블 */
+.developer-info-table {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+.developer-info-table th,
+.developer-info-table td {
+    padding: 16px 24px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.developer-info-table th {
+    background: rgba(56, 189, 248, 0.1);
+    color: var(--accent-color);
+    font-weight: 600;
+    width: 140px;
+}
+
+.developer-info-table tr:last-child td {
+    border-bottom: none;
+}
+
+.developer-info-table td {
+    color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+    .developer-info-table th,
+    .developer-info-table td {
+        padding: 12px 16px;
+        font-size: 0.9rem;
+    }
+}

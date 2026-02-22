@@ -1,0 +1,20 @@
+/**
+ * 파일명: variables.css
+ * 수정일자: 2026-02-22
+ * 용도: NamDev 사이트 전역 CSS 변수 정의 (테마 색상, 폰트 등)
+ * 구동 방법: main.css 또는 developer.css에서 @import로 로드. 별도 실행 불필요.
+ * 의존성: 없음 (가장 먼저 로드되어야 함)
+ */
+
+:root {
+    --bg-color: #0f172a;
+    --text-color: #f8fafc;
+    --accent-color: #38bdf8;
+    --accent-hover: #0ea5e9;
+    --card-bg: #1e293b;
+    --header-bg: rgba(15, 23, 42, 0.9);
+    --footer-bg: #0b1120;
+    --border-color: rgba(255, 255, 255, 0.05);
+    --muted-color: #94a3b8;
+    --muted-dark: #64748b;
+}

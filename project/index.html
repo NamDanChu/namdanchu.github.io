@@ -1,0 +1,58 @@
+<!--
+  파일명: index.html
+  수정일자: 2026-02-22
+  용도: NamDev 프로젝트 목록 페이지 (카테고리별: 앱, 웹, 프로그램)
+  구동 방법: project/index.html 직접 접속 또는 main.html에서 Project 링크로 이동
+  레이아웃: 왼쪽 사이드바(프로젝트 리스트) + 오른쪽 메인(프로젝트명/카테고리 + 상세 내용)
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project | NamDev</title>
+    <link rel="stylesheet" href="css/project.css">
+</head>
+<body>
+    <div class="project-layout">
+        <!-- 왼쪽 사이드바: 프로젝트 리스트 -->
+        <aside class="project-sidebar">
+            <div class="project-sidebar-title">프로젝트 리스트</div>
+            <ul class="project-list" id="project-list">
+                <!-- JS로 렌더링 -->
+            </ul>
+        </aside>
+
+        <!-- 오른쪽 메인 콘텐츠 -->
+        <main class="project-main">
+            <!-- 상단: 프로젝트 이름, 카테고리 -->
+            <header class="project-header">
+                <a href="../main.html" class="back-link">← NamDev 메인으로</a>
+                <h1 id="project-name">SchoolManager</h1>
+                <p class="project-category" id="project-category">웹</p>
+                <div class="project-references" id="project-references">
+                    <span class="ref-label">참고 자료:</span>
+                    <!-- JS로 렌더링 -->
+                </div>
+            </header>
+
+            <!-- 하단: 해당 카테고리에 맞는 내용 (설명, 개인정보처리방침) -->
+            <div class="project-content">
+                <div class="content-tabs">
+                    <button type="button" class="content-tab active" id="tab-desc" onclick="switchTab('desc')">설명</button>
+                    <button type="button" class="content-tab" id="tab-privacy" onclick="switchTab('privacy')" style="display:none;">개인정보처리방침</button>
+                </div>
+
+                <div id="content-desc" class="content-panel active">
+                    <!-- JS로 로드 -->
+                </div>
+                <div id="content-privacy" class="content-panel">
+                    <!-- JS로 로드 (해당 프로젝트에 있을 경우) -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/project.js"></script>
+</body>
+</html>
