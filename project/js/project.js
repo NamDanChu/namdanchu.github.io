@@ -63,6 +63,17 @@ const PROJECTS = {
             <p>온라인 멀티플레이어 틱택토 게임입니다. Google 로그인을 지원하며, AI 대전 및 랭킹 시스템을 제공합니다.</p>
         `,
         privacyPolicy: 'data/tictactoe-privacy.html'
+    },
+    tictacmove: {
+        id: 'tictacmove',
+        name: 'TicTac-Move',
+        category: '앱',
+        references: [],
+        description: `
+            <h2>설명</h2>
+            <p>오프라인 틱택토 게임 앱입니다. 로그인 없이 기기에서 바로 즐길 수 있습니다.</p>
+        `,
+        privacyPolicy: 'data/tictacmove-privacy.html'
     }
 };
 
