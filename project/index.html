@@ -21,30 +21,30 @@
             <ul class="project-list" id="project-list">
                 <!-- JS로 렌더링 -->
             </ul>
+            <a href="../main.html" class="back-link">← NamDev 메인으로</a>
         </aside>
 
         <!-- 오른쪽 메인 콘텐츠 -->
         <main class="project-main">
             <!-- 상단: 프로젝트 이름, 카테고리 -->
             <header class="project-header">
-                <a href="../main.html" class="back-link">← NamDev 메인으로</a>
                 <h1 id="project-name">SchoolManager</h1>
                 <p class="project-category" id="project-category">웹</p>
-                <div class="project-references" id="project-references">
-                    <span class="ref-label">참고 자료:</span>
-                    <!-- JS로 렌더링 -->
-                </div>
             </header>
 
             <!-- 하단: 해당 카테고리에 맞는 내용 (설명, 개인정보처리방침) -->
             <div class="project-content">
                 <div class="content-tabs">
                     <button type="button" class="content-tab active" id="tab-desc" onclick="switchTab('desc')">설명</button>
+                    <button type="button" class="content-tab" id="tab-refs" onclick="switchTab('refs')" style="display:none;">참고 자료</button>
                     <button type="button" class="content-tab" id="tab-privacy" onclick="switchTab('privacy')" style="display:none;">개인정보처리방침</button>
                 </div>
 
                 <div id="content-desc" class="content-panel active">
                     <!-- JS로 로드 -->
+                </div>
+                <div id="content-refs" class="content-panel">
+                    <!-- JS로 로드 (참고 자료 있을 경우) -->
                 </div>
                 <div id="content-privacy" class="content-panel">
                     <!-- JS로 로드 (해당 프로젝트에 있을 경우) -->

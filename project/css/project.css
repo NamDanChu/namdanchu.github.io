@@ -29,8 +29,10 @@ body {
     width: 220px;
     min-width: 220px;
     border-right: 3px solid #000000;
-    padding: 20px 0;
+    padding: 20px 0 0;
     background: #ffffff;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-sidebar-title {
@@ -49,6 +51,7 @@ body {
     list-style: none;
     padding: 0 15px;
     margin: 0;
+    flex: 1;
 }
 
 .project-list li {
@@ -75,7 +78,13 @@ body {
     background: #f0f0f0;
 }
 
-.category-label {
+.project-list .project-name {
+    display: block;
+    font-weight: 600;
+}
+
+.project-list .category-label {
+    display: block;
     font-size: 0.75rem;
     color: #666;
     margin-top: 4px;
@@ -108,23 +117,11 @@ body {
     margin: 0;
 }
 
-/* 참고 자료 (PPT, 사이트 주소 등) */
-.project-references {
-    margin-top: 20px;
-    padding-top: 15px;
-    border-top: 2px solid #000000;
-}
-
-.ref-label {
-    font-size: 0.9rem;
-    font-weight: 600;
-    margin-right: 12px;
-}
-
+/* 참고 자료 (탭 내 콘텐츠) */
 .ref-link {
     display: inline-block;
-    padding: 6px 14px;
-    margin: 4px 8px 4px 0;
+    padding: 8px 16px;
+    margin: 6px 10px 6px 0;
     border: 2px solid #000000;
     color: #000000;
     text-decoration: none;
@@ -222,16 +219,20 @@ body {
     margin-top: 20px;
 }
 
-.back-link {
-    display: inline-block;
-    margin-bottom: 20px;
+/* 사이드바 하단 메인으로 링크 */
+.project-sidebar .back-link {
+    display: block;
+    margin-top: auto;
+    padding: 15px 15px;
     color: #000000;
     text-decoration: underline;
     font-size: 0.9rem;
+    border-top: 2px solid #000000;
 }
 
-.back-link:hover {
+.project-sidebar .back-link:hover {
     text-decoration: none;
+    background: #f0f0f0;
 }
 
 /* 빈 상태 */

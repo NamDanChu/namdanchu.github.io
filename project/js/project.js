@@ -87,15 +87,18 @@ function renderProjectList() {
     const listEl = document.getElementById('project-list');
     if (!listEl) return;
 
+    const projectOrder = ['imageeditor', 'tictacmove', 'tictactoe', 'catdefence2048', 'schoolmanager'];
     const byCategory = { '웹': [], '앱': [], '프로그램': [] };
-    Object.values(PROJECTS).forEach(p => {
-        if (byCategory[p.category]) byCategory[p.category].push(p);
+
+    projectOrder.forEach(id => {
+        const p = PROJECTS[id];
+        if (p && byCategory[p.category]) byCategory[p.category].push(p);
     });
 
     let html = '';
-    ['웹', '앱', '프로그램'].forEach(cat => {
+    ['프로그램', '앱', '웹'].forEach(cat => {
         byCategory[cat].forEach(p => {
-            html += `<li><a href="#${p.id}" data-id="${p.id}">${p.name}<span class="category-label">${p.category}</span></a></li>`;
+            html += `<li><a href="#${p.id}" data-id="${p.id}"><span class="project-name">${p.name}</span><span class="category-label">${p.category}</span></a></li>`;
         });
     });
 
@@ -121,27 +124,27 @@ function selectProject(id) {
     document.getElementById('project-name').textContent = project.name;
     document.getElementById('project-category').textContent = project.category;
 
-    const refEl = document.getElementById('project-references');
-    if (refEl) {
-        if (project.references && project.references.length > 0) {
-            refEl.style.display = '';
-            refEl.innerHTML = '<span class="ref-label">참고 자료:</span>' + project.references.map(r => {
-                const attrs = r.download ? `href="${r.url}" download` : `href="${r.url}" target="_blank"`;
-                return `<a class="ref-link" ${attrs}>${r.label}</a>`;
-            }).join('');
-        } else {
-            refEl.style.display = 'none';
-            refEl.innerHTML = '';
-        }
-    }
-
     const descPanel = document.getElementById('content-desc');
+    const refsPanel = document.getElementById('content-refs');
     const privacyPanel = document.getElementById('content-privacy');
     const tabDesc = document.getElementById('tab-desc');
+    const tabRefs = document.getElementById('tab-refs');
     const tabPrivacy = document.getElementById('tab-privacy');
 
     descPanel.innerHTML = project.description;
     descPanel.classList.add('active');
+
+    if (project.references && project.references.length > 0) {
+        tabRefs.style.display = '';
+        refsPanel.innerHTML = project.references.map(r => {
+            const attrs = r.download ? `href="${r.url}" download` : `href="${r.url}" target="_blank"`;
+            return `<a class="ref-link" ${attrs}>${r.label}</a>`;
+        }).join('');
+        refsPanel.classList.remove('active');
+    } else {
+        tabRefs.style.display = 'none';
+        refsPanel.innerHTML = '';
+    }
 
     if (project.privacyPolicy) {
         tabPrivacy.style.display = '';
@@ -153,6 +156,7 @@ function selectProject(id) {
     }
 
     tabDesc.classList.add('active');
+    tabRefs.classList.remove('active');
     tabPrivacy.classList.remove('active');
 }
 
